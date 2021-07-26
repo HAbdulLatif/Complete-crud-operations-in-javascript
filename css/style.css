@@ -1,0 +1,82 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color: aqua;
+}
+.height{
+    max-height: 100vh;
+}
+/* .width{
+    max-width: 550px;
+} */
+.padding-1{
+    padding-left: 100px;
+}
+.form-left {
+    padding-left: 4em;
+    padding-bottom: 0.7em;
+}
+.formControl {
+	/* margin-bottom: 10px;
+	padding-bottom: 20px; */
+	position: relative;
+	width: 90%;
+
+}
+
+.formControl.success input {
+	border-color: #dadddb;
+}
+
+.formControl.error input {
+	border-color: #e74c3c;
+}
+.formControl.success select {
+	border-color: #f9faf9;
+}
+
+.formControl.error select {
+	border-color: #e74c3c;
+}
+.formControl.success textarea {
+	border-color: #e3ebe6;
+}
+
+.formControl.error textarea {
+	border-color: #e74c3c;
+	margin-left: 5px;
+}
+.formControl i.fa-check-circle {
+	visibility: hidden;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}
+.formControl i.fa-exclamation-circle {
+	visibility: hidden;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}
+
+.formControl.success i.fa-check-circle {
+	color: #2ecc71;
+	visibility: visible;
+}
+
+.formControl.error i.fa-exclamation-circle {
+	color: #e74c3c;
+	visibility: visible;
+}
+.formControl small {
+	color: #e74c3c;
+	position: absolute;
+    bottom: -17px;
+    left: 65px;
+    font-size: 15px;
+	visibility: hidden;
+}
+
+.formControl.error small {
+	visibility: visible;
+}

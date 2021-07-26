@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- bootstrap file -->
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+    <!-- end of bootstrap file -->
+
+    <!-- font awesome icon-->
+    <!-- <script src="javascript/all.js"></script> -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+    <!-- end of font awesome icon -->
+
+    <!-- custom css file -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- end of custom css file -->
+    <title>Student Registration Form</title>
+</head>
+<body>
+    
+    <div class="container bg-light py-5">
+        <div class="row justify-content-center">
+            <div class="col-6 width">
+                    <h3 class="py-4 text-center">Student Registration Form</h3>
+                    <!-- form-group// -->
+                <form id="form">
+                    <div class="form-group input-group pl-3 ">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                         </div>
+                         <div class="formControl">
+                            <input type="text" class="form-control"  placeholder="First Name" required id="FirstName" >
+                            <!-- <i class="fas fa-check-circle"></i> -->
+                            <i class="fas fa-exclamation-circle"></i>
+                            <small>Error message</small>
+                        </div>
+                    </div>
+                    <!-- form-group// -->
+                    <div class="form-group input-group pl-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                         </div>
+                        <div class="formControl">
+                        <input type="text" class="form-control"  placeholder="Last Name" required id="LastName">
+                        <!-- <i class="fas fa-check-circle"></i> -->
+                        <i class="fas fa-exclamation-circle"></i>
+                        <small>Error message</small>
+                        </div>
+                    </div>
+                    <!-- form-group// -->
+                    <div class="form-group input-group pl-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"> <i class="fa fa-user-circle"></i> </span>
+                         </div>
+                        <div class="formControl">
+                        <input type="text" class="form-control" placeholder="Father Name" required id="FatherName">
+                        <!-- <i class="fas fa-check-circle"></i> -->
+                        <i class="fas fa-exclamation-circle"></i>
+                        <small>Error message</small>
+                        </div>
+                    </div>
+                    <!-- form-group// -->
+                    <div class="form-group input-group pl-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"> <i class="fas fa-id-card"></i> </span>
+                         </div>
+                         <div class="formControl">
+                        <input type="text" class="form-control" placeholder="Enter CNIC" required id="Cnic">
+                        <!-- <i class="fas fa-check-circle"></i> -->
+                        <i class="fas fa-exclamation-circle"></i>
+                        <small>Error message</small>
+                        </div>
+                    </div> 
+                     <!-- form-group// -->
+                    <div class="form-group input-group pl-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"> <i class="fa fa-graduation-cap"></i> </span>
+                        </div>
+                        <div class="formControl">
+                        <select  class="form-control  pl-3" id="Programs" onchange="subjectchange()">
+                            <option value="">Enter Programs</option>
+                            <option value="BS">BS</option>
+                            <option value="MBA">MBA</option>
+                            <option value="MS">MS</option>
+                            <option value="BIOTECH">BIOTECH</option>
+                        </select>
+                            <!-- <i class="fas fa-check-circle"></i> -->
+                            <i class="fas fa-exclamation-circle"></i>
+                            <small>Error message</small>
+                        </div>
+                    </div> 
+                    <div class="formControl">
+                    <div id="subjectlist">
+                        <!-- <div class="form-check form-check-inline form-left">
+                            <input class="form-check-input Subject" type="checkbox" id="inlineCheckbox1" value="option1">
+                            <label class="form-check-label" for="inlineCheckbox1">CS201</label>
+                          </div>
+                          <div class="form-check form-check-inline form-left">
+                            <input class="form-check-input Subject" type="checkbox" id="inlineCheckbox2" value="option2">
+                            <label class="form-check-label" for="inlineCheckbox2">CS401</label>
+                          </div>
+                          <div class="form-check form-check-inline form-left">
+                            <input class="form-check-input Subject" type="checkbox" id="inlineCheckbox3" value="option3">
+                            <label class="form-check-label" for="inlineCheckbox3">CS501</label>
+                          </div>
+                          <div class="form-check form-check-inline form-left">
+                            <input class="form-check-input Subject" type="checkbox" id="inlineCheckbox4" value="option4">
+                            <label class="form-check-label" for="inlineCheckbox4">CS502</label>
+                          </div>
+                            <div class="form-check form-check-inline form-left">
+                             <input class="form-check-input Subject" type="checkbox" id="inlineCheckbox5" value="option5">
+                            <label class="form-check-label" for="inlineCheckbox5">CS610</label>
+                             </div> -->
+                            </div>
+                    </div>
+                    <!-- form-group// -->
+                    <div class="form-group input-group pl-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"> <i class="fas fa-calendar-alt"></i> </span>
+                        </div>
+                        <div class="formControl">
+                        <select  class="form-control pl-3" id="session" onchange="subjectvalidaion('sb')">
+                            <option value="">Select year</option>
+                            <option value="FA2015">FALL 2015</option>
+                            <option value="SP2015">SPRING 2015</option>
+                            <option value="FA2016">FALL 2016</option>
+                            <option value="SP2016">SPRING 2016</option>
+                            <option value="FA2017">FALL 2017</option>
+                            <option value="SP2017">SPRING 2017</option>
+                            <option value="FA2018">FALL 2018</option>
+                            <option value="SP2018">SPRING 2018</option>
+                            <option value="FA2019">FALL 2019</option>
+                            <option value="SP2019">SPRING 2019</option>
+                            <option value="FA2020">FALL 2020</option>
+                            <option value="SP2020">SPRING 2020</option>   
+                            <option value="FA2021">FALL 2021</option>
+                            <option value="SP2021">SPRING 2021</option>  
+                        </select>
+                            <!-- <i class="fas fa-check-circle"></i> -->
+                            <i class="fas fa-exclamation-circle"></i>
+                            <small>Error message</small>
+                        </div>
+                    </div>
+                    <div class="col-12 formControl">
+                        <textarea name="form-control" id="message" cols="70" rows="5" placeholder="Tell Me About Yourself"></textarea>
+                        <!-- <i class="fas fa-check-circle"></i> -->
+                        <i class="fas fa-exclamation-circle"></i>
+                        <small>Error message</small>
+                    </div>
+                    
+                    <!-- form-group button -->                                      
+                    <div class="form-group pl-3 pt-4 float-left">
+                        <button type="button" onclick="addRecord()" id="regbtn" class="btn btn-outline-dark text-uppercase font-weight-bold">  Registred </button>
+                    </div>  
+                    <div class="form-group pl-3 pt-4 float-right">
+                        <button type="reset" onclick="resetform()" class="btn btn-outline-dark text-uppercase font-weight-bold">  Reset </button>
+                    </div>                                                            
+                </form>
+            </div>
+            <div class="col-10">
+                <h3 class="py-4 text-center">Registered Student Information</h3>
+                <table class="table" id="myTableData">
+                    <thead class="thead-dark">
+                      <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Roll Number</th>
+                        <th scope="col">Study Program</th>
+                        <th scope="col">Subject</th>
+                        <th scope="col">Action</th>
+                        <!-- <th scope="col">Delete</th> -->
+                      </tr>
+                    </thead>
+                    <tbody id="recordtbl"></tbody>
+
+                </table>
+            </div>
+        </div>
+    </div> 
+        <!--container end.//-->
+
+
+
+
+
+
+
+
+    <!-- bootstrap javascript & jquery files -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js" integrity="sha384-LtrjvnR4Twt/qOuYxE721u19sVFLVSA4hf/rRt6PrZTmiPltdZcI7q7PXQBYTKyf" crossorigin="anonymous"></script>
+    <!-- end of bootstrap javascript & jquery files -->
+
+    <!-- custom javascript file -->
+    <script src="javascript/registration.js"></script>
+    <!-- end of javascript file -->
+</body>
+</html>
